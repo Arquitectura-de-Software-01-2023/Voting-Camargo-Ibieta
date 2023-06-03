@@ -1,0 +1,66 @@
+service: votos
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:PutItem
+        - dynamodb:GetItem
+        - dynamodb:UpdateItem
+        - dynamodb:Scan
+        - dynamodb:DeleteItem
+      Resource: arn:aws:dynamodb:us-east-1:979228466881:table/myVotesTable
+resources:
+  Resources:
+    VotesTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: myVotesTable
+        AttributeDefinitions:
+          - AttributeName: voteId
+            AttributeType: S
+        KeySchema:
+          - AttributeName: voteId
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
+  
+functions:
+  voteProcessor:
+    handler: handler.voteProcessing
+    events:
+      - http:
+          path: vote
+          method: post
+          cors:
+            origins: '*'
+            headers:
+              - Content-Type
+            allowCredentials: true
+  getVotes:
+    handler: handler.getVotes
+    events:
+      - http:
+          path: votes
+          method: get
+          cors:
+            origins: '*'
+            headers:
+              - Content-Type
+            allowCredentials: true
+  deleteVotes:
+    handler: handler.deleteVotes
+    events:
+      - http:
+          path: delete
+          method: delete
+          cors:
+            origins: '*'
+            headers:
+              - Content-Type
+            allowCredentials: true

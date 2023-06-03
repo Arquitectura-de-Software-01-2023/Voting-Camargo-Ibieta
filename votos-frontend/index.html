@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Votación</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background"></div>
+  <div class="container">
+    <h1>Sistema de Votación</h1>
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    <div class="candidates">
+      <h2>Elige tu favorita:</h2>
+      <ul>
+        <li>
+          <div class="card">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/lat_2ae5e247.jpeg?region=0%2C0%2C799%2C1000" alt="Candidato 1">
+            <h3>Guardians of the Galaxy Vol. 3</h3>
+            <input type="radio" id="candidate1" name="candidate" value="Guardians">
+            <label for="candidate1">Votar</label>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img src="https://pics.filmaffinity.com/Spider_Man_No_Way_Home-819449455-large.jpg" alt="Candidato 2">
+            <h3>Spiderman No Way Home</h3>
+            <input type="radio" id="candidate2" name="candidate" value="Spider-man">
+            <label for="candidate2">Votar</label>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/p_drstrangeinthemultiverseofmadness_245_476cabb1.jpeg?region=0%2C0%2C540%2C810" alt="Candidato 3">
+            <h3>Dr Strange: Multiverse</h3>
+            <input type="radio" id="candidate3" name="candidate" value="Dr.Strange">
+            <label for="candidate3">Votar</label>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <button id="voteButton">Votar</button>
+    <button id="deleteButton" class="delete-button">Borrar</button>
+
+    <h2>Resultados de los votos:</h2>
+    <div id="voteResults"></div>
+  </div>
+  
+
+
+  <script src="main.js"></script>
+</body>
+</html>
+
