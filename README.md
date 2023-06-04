@@ -40,8 +40,6 @@ El backend del sistema de votación utiliza servicios de AWS y se encuentra conf
 - `serverless.yml`: Archivo de configuración del Serverless Framework que define las funciones Lambda, las rutas de la API y los permisos de acceso.
 - `handler.js`: Archivo que contiene las funciones Lambda que manejan las operaciones de votación y obtención de votos.
 
-Aquí tienes una versión actualizada del README que incluye la instalación de Serverless:
-
 ## Requisitos
 
 Antes de utilizar este proyecto, asegúrate de tener instalado lo siguiente:
