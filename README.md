@@ -15,6 +15,7 @@ Este es un proyecto de sistema de votación que permite a los usuarios votar por
 
 ## Estructura del proyecto
 ![Diagrama](Diagrama.jpg)
+
 Los componentes vistos en el diagrama son los siguientes:
 -Pagina web Front
 -Internet
