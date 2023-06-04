@@ -14,7 +14,7 @@ Este es un proyecto de sistema de votación que permite a los usuarios votar por
 - Serverless Framework
 
 ## Estructura del proyecto
-![Diagrama](Digrama.jpg)
+![Diagrama](Diagrama.jpg)
 Los componentes vistos en el diagrama son los siguientes:
 -Pagina web Front
 -Internet
